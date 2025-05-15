@@ -1,0 +1,25 @@
+.header {
+	min-height: 43.75rem;
+	max-width: var(--container-max-width);
+	width: 100%;
+	background-color: var(--color-text-bg-secondary);
+	padding: 3rem 6.3125rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 0.625rem 0.625rem 0.625rem 18.125rem;
+	margin: 0 auto;
+	position: relative;
+	@media (max-width: 1023.98px) {
+		min-height: auto;
+		border-radius: 0;
+		padding: 3rem 2rem;
+		justify-content: flex-start;
+	}
+
+	@media (max-width: 767px) {
+		min-height: auto;
+		padding: 6rem 1.25rem 3rem;
+	}
+}

@@ -1,0 +1,11 @@
+.blog-page {
+	min-height: 100vh;
+	background-color: var(--color-background);
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 3rem;
+}
+
+.blog-page__main {
+	flex: 1;
+}

@@ -1,0 +1,40 @@
+.scrollToTopButton {
+	position: fixed;
+	bottom: 2rem;
+	right: 4rem;
+	background-color: var(--color-bg-elements-and-text);
+	color: var(--color-text-and-bg);
+	width: 3.125rem;
+	height: 3.125rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	opacity: 0.8;
+	transition: all 0.3s ease;
+	z-index: 1000;
+	box-shadow: var(--shadow-l);
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1.1);
+		background-color: var(--color-text-bg-secondary);
+	}
+
+	@media (max-width: 1023.98px) {
+		right: 2rem;
+		bottom: 2rem;
+	}
+
+	@media (max-width: 767px) {
+		right: 1.5rem;
+		bottom: 1.5rem;
+		width: 2.75rem;
+		height: 2.75rem;
+		font-size: 1.25rem;
+	}
+}
