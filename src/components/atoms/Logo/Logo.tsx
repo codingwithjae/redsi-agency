@@ -1,5 +1,5 @@
-import logoPurple from "@/assets/images/logo-v2.svg";
-import logoWhite from "@/assets/images/logo.svg";
+import logoPurple from "@/assets/images/logo-v2.webp";
+import logoWhite from "@/assets/images/logo.webp";
 import "./Logo.css";
 
 interface LogoProps {
