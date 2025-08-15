@@ -44,6 +44,7 @@ export default function HeroSection() {
 					height={600}
 					loading="eager"
 					fetchPriority="high"
+					decoding="async"
 				/>
 			</figure>
 		</section>
