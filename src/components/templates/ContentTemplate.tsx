@@ -1,18 +1,22 @@
-import Card from "@/components/molecules/Card/Card";
-import About from "@/components/organisms/About/About";
-import Services from "@/components/organisms/Banner/Banner";
-import Contact from "@/components/organisms/Form/Form";
+import { lazy, Suspense } from "react";
 import "./ContentTemplate.css";
+
+const Card = lazy(() => import("@/components/molecules/Card/Card"));
+const About = lazy(() => import("@/components/organisms/About/About"));
+const Services = lazy(() => import("@/components/organisms/Banner/Banner"));
+const Contact = lazy(() => import("@/components/organisms/Form/Form"));
 
 export default function ContentTemplate() {
 	return (
 		<main className="content-template">
-			<About />
-			<Services />
-			<div className="cards-wrapper">
-				<Card />
-			</div>
-			<Contact />
+			<Suspense fallback={null}>
+				<About />
+				<Services />
+				<div className="cards-wrapper">
+					<Card />
+				</div>
+				<Contact />
+			</Suspense>
 		</main>
 	);
 }

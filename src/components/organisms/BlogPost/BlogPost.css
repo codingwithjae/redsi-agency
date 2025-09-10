@@ -98,7 +98,7 @@
 
 	&__author-name {
 		font-family: var(--montserrat-family);
-		font-weight: var(--montserrat-medium-weight);
+		font-weight: var(--montserrat-bold-weight);
 		font-size: var(--font-size-body-xxs);
 		color: var(--color-text-light);
 	}
@@ -149,7 +149,7 @@
 			font-family: var(--poppins-family);
 			color: var(--color-text-bg-secondary);
 			margin: 1.5rem 0 1rem;
-			font-weight: var(--poppins-medium-weight);
+			font-weight: var(--poppins-bold-weight);
 		}
 
 		h2 {

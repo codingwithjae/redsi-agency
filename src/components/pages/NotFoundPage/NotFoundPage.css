@@ -27,7 +27,7 @@
 
 	&__subtitle {
 		font-family: var(--poppins-family);
-		font-weight: var(--poppins-medium-weight);
+		font-weight: var(--poppins-bold-weight);
 		font-size: clamp(var(--font-size-body-s), 5vw, var(--font-size-heading-m));
 		color: var(--color-bg-elements-and-text);
 		margin-bottom: 2rem;

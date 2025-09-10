@@ -52,7 +52,7 @@
 		font-size: var(--font-size-body-xs);
 		font-family: var(--poppins-family);
 		text-align: left;
-		font-weight: 500;
+		font-weight: var(--poppins-regular-weight);
 		line-height: 1.3;
 		color: var(--color-text-and-bg);
 		max-width: 16.5rem;

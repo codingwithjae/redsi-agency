@@ -70,7 +70,7 @@
 
 	&__details-two {
 		color: var(--color-text-bg-secondary);
-		font-weight: var(--poppins-medium-weight);
+		font-weight: var(--poppins-regular-weight);
 	}
 
 	.details {

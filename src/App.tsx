@@ -13,10 +13,11 @@ const BlogPage = lazy(() => import("@/components/pages/BlogPage/BlogPage"));
 const BlogPostPage = lazy(
 	() => import("@/components/pages/BlogPostPage/BlogPostPage"),
 );
-const MainPage = lazy(() => import("@/components/pages/MainPage/MainPage"));
 const NotFoundPage = lazy(
 	() => import("@/components/pages/NotFoundPage/NotFoundPage"),
 );
+
+import MainPage from "@/components/pages/MainPage/MainPage";
 
 function App() {
 	const location = useLocation();
@@ -25,38 +26,50 @@ function App() {
 	return (
 		<HelmetProvider>
 			<DataProvider>
-				<BlogProvider>
-					<div className={isAdmin ? "layout--admin" : "layout--public"}>
-						<Suspense fallback={<Spinner />}>
-							<Routes>
-								<Route path="/" element={<MainPage />} />
-								<Route path="/blog" element={<BlogPage />} />
-								<Route path="/blog/:slug" element={<BlogPostPage />} />
-								<Route path="/admin/*" element={<AdminPage />} />
-								<Route path="*" element={<NotFoundPage />} />
-							</Routes>
-						</Suspense>
-					</div>
-					{!isAdmin && (
-						<>
-							<div className="layout-container">
-								<GoToTop />
-							</div>
-							<ToastContainer
-								position="bottom-right"
-								autoClose={5000}
-								hideProgressBar={false}
-								newestOnTop={false}
-								closeOnClick
-								rtl={false}
-								pauseOnFocusLoss
-								draggable
-								pauseOnHover
-								theme="light"
+				<div className={isAdmin ? "layout--admin" : "layout--public"}>
+					<Suspense fallback={<Spinner />}>
+						<Routes>
+							<Route path="/" element={<MainPage />} />
+							<Route
+								path="/blog"
+								element={
+									<BlogProvider>
+										<BlogPage />
+									</BlogProvider>
+								}
 							/>
-						</>
-					)}
-				</BlogProvider>
+							<Route
+								path="/blog/:slug"
+								element={
+									<BlogProvider>
+										<BlogPostPage />
+									</BlogProvider>
+								}
+							/>
+							<Route path="/admin/*" element={<AdminPage />} />
+							<Route path="*" element={<NotFoundPage />} />
+						</Routes>
+					</Suspense>
+				</div>
+				{!isAdmin && (
+					<>
+						<div className="layout-container">
+							<GoToTop />
+						</div>
+						<ToastContainer
+							position="bottom-right"
+							autoClose={5000}
+							hideProgressBar={false}
+							newestOnTop={false}
+							closeOnClick
+							rtl={false}
+							pauseOnFocusLoss
+							draggable
+							pauseOnHover
+							theme="light"
+						/>
+					</>
+				)}
 			</DataProvider>
 		</HelmetProvider>
 	);
