@@ -7,7 +7,7 @@ const ToastContainer = lazy(() =>
     })),
 );
 
-export default function LazyToast() {
+export default function Toast() {
     return (
         <Suspense fallback={null}>
             <ToastContainer

@@ -1,21 +1,21 @@
 import { lazy, Suspense } from "react";
 import "./ContentTemplate.css";
 
-const Card = lazy(() => import("@/components/molecules/Card/Card"));
-const About = lazy(() => import("@/components/organisms/About/About"));
-const Services = lazy(() => import("@/components/organisms/Banner/Banner"));
-const Contact = lazy(() => import("@/components/organisms/Form/Form"));
+const LazyServiceCard = lazy(() => import("@/components/molecules/Card/Card"));
+const LazyAboutSection = lazy(() => import("@/components/organisms/About/About"));
+const LazyServicesBanner = lazy(() => import("@/components/organisms/Banner/Banner"));
+const LazyContactForm = lazy(() => import("@/components/organisms/Form/Form"));
 
 export default function ContentTemplate() {
 	return (
 		<main className="content-template">
 			<Suspense fallback={null}>
-				<About />
-				<Services />
+				<LazyAboutSection />
+				<LazyServicesBanner />
 				<div className="cards-wrapper">
-					<Card />
+					<LazyServiceCard />
 				</div>
-				<Contact />
+				<LazyContactForm />
 			</Suspense>
 		</main>
 	);
