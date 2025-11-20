@@ -46,16 +46,22 @@ export default function HeroSection() {
 			</div>
 
 			<figure className="hero__container">
-				<img
-					className="hero__container-image"
-					src="/assets/images/hero-images.webp"
-					alt="Redsi Creative Heroes"
-					width={600}
-					height={600}
-					loading="eager"
-					fetchPriority="high"
-					decoding="async"
-				/>
+				<picture>
+					<source
+						media="(max-width: 767px)"
+						srcSet="/assets/images/hero-images-mobile.webp"
+					/>
+					<img
+						className="hero__container-image"
+						src="/assets/images/hero-images.webp"
+						alt="Redsi Creative Heroes"
+						width={600}
+						height={600}
+						loading="eager"
+						fetchPriority="high"
+						decoding="async"
+					/>
+				</picture>
 			</figure>
 		</section>
 	);

@@ -1,7 +1,9 @@
 import SEO from "@/components/atoms/SEO/SEO";
-import Footer from "@/components/organisms/Footer/Footer";
 import Header from "@/components/organisms/Header/Header";
 import ContentTemplate from "@/components/templates/ContentTemplate";
+import { Suspense, lazy } from "react";
+
+const LazyFooter = lazy(() => import("@/components/organisms/Footer/Footer"));
 
 export default function MainPage() {
 	return (
@@ -14,7 +16,9 @@ export default function MainPage() {
 			/>
 			<Header />
 			<ContentTemplate />
-			<Footer />
+			<Suspense fallback={null}>
+				<LazyFooter />
+			</Suspense>
 		</>
 	);
 }
