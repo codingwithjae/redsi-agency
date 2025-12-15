@@ -50,12 +50,12 @@
 }
 
 .spinner__message {
-	margin-top: 1rem;
-	font-family: var(--montserrat-family);
-	font-size: var(--font-size-body-xs);
-	color: var(--color-text-muted);
+	margin-top: 1.5rem;
+	font-family: var(--poppins-family);
+	font-weight: 600;
+	font-size: var(--font-size-body-s);
+	color: var(--color-text-bg-secondary);
 	max-width: 80%;
-	word-wrap: break-word;
 }
 
 @media (max-width: 768px) {

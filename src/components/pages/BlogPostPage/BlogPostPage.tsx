@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./BlogPostPage.css";
 
-export default function BlogPostPage() {
+function BlogPostContent() {
 	const { slug } = useParams<{ slug: string }>();
 	const { currentPost } = useBlog();
 
@@ -36,12 +36,18 @@ export default function BlogPostPage() {
 						: ""
 				}
 			/>
-			<BlogProvider>
-				<BlogTemplate>
-					<BlogPost />
-					<BlogNavButton type="back" destination="/blog" />
-				</BlogTemplate>
-			</BlogProvider>
+			<BlogTemplate>
+				<BlogPost />
+				<BlogNavButton type="back" destination="/blog" />
+			</BlogTemplate>
 		</>
+	);
+}
+
+export default function BlogPostPage() {
+	return (
+		<BlogProvider>
+			<BlogPostContent />
+		</BlogProvider>
 	);
 }
