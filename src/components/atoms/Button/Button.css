@@ -1,0 +1,81 @@
+.button {
+	font-family: var(--poppins-family);
+	color: var(--color-text-and-bg);
+	border-radius: 3.125rem;
+	transition: transform 0.3s ease, color 0.3s ease;
+	border: none;
+	font-size: clamp(var(--font-size-body-s), 4vw, var(--font-size-body-xs));
+	cursor: pointer;
+	font-weight: var(--poppins-bold-weight);
+	width: 11.5625rem;
+	height: 3.4375rem;
+	border-color: none;
+	outline: none;
+
+	&:hover {
+		background-color: var(--color-secondary-elements-bg);
+		border: none;
+		transform: scale(1.1);
+	}
+
+	&--primary {
+		background-color: var(--color-text-and-bg);
+		color: var(--color-text-bg-secondary);
+
+		&:hover {
+			background-color: var(--color-secondary-elements-bg);
+		}
+	}
+
+	&--secondary {
+		align-self: flex-start;
+		background-color: var(--color-bg-elements-and-text);
+		color: var(--color-text-and-bg);
+
+		&:hover {
+			background-color: var(--color-secondary-elements-bg);
+			color: var(--color-text-bg-secondary);
+		}
+	}
+
+	&--tertiary {
+		margin-top: 1.25rem;
+		background-color: var(--color-secondary-elements-bg);
+		color: var(--color-text-bg-secondary);
+		width: auto;
+		min-width: 15rem;
+		height: 4.5rem;
+		padding: 0 2.5rem;
+		font-size: 1.3rem;
+		border-radius: 5rem;
+
+		&:hover {
+			color: var(--color-bg-elements-and-text);
+		}
+	}
+
+	&--quaternary,
+	&--quinary {
+		background-color: var(--color-bg-elements-and-text);
+		width: 100%;
+		height: 3.5rem;
+		border-radius: 5rem;
+
+		&:hover {
+			background-color: var(--color-bg-elements-and-text);
+		}
+	}
+
+	@media (max-width: 480px) {
+		&--primary,
+		&--secondary,
+		&--tertiary {
+			width: 11.5625rem;
+			height: 3.4375rem;
+		}
+
+		&--quaternary {
+			padding: 0.625rem 1.25rem;
+		}
+	}
+}

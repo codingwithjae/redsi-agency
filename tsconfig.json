@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "esnext",
+		"noEmit": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noImplicitOverride": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"strict": true,
+		"jsx": "react-jsx",
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "force",
+		"skipLibCheck": true,
+		"moduleResolution": "bundler",
+		"noImplicitAny": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"lib": ["esnext", "dom", "dom.iterable"],
+		"types": ["vite/client"]
+	},
+	"include": ["src", ".storybook"]
+}
