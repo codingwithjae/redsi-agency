@@ -2,6 +2,7 @@ import BlogNavButton from "@/components/atoms/BlogNavButton/BlogNavButton";
 import SEO from "@/components/atoms/SEO/SEO";
 import BlogEntries from "@/components/organisms/BlogEntries/BlogEntries";
 import BlogTemplate from "@/components/templates/BlogTemplate";
+import { BlogProvider } from "@/context/BlogProvider";
 import "./BlogPage.css";
 
 export default function BlogPage() {
@@ -16,10 +17,12 @@ export default function BlogPage() {
 					typeof window !== "undefined" ? `${window.location.origin}/blog` : ""
 				}
 			/>
-			<BlogTemplate>
-				<BlogEntries />
-				<BlogNavButton type="home" destination="/" />
-			</BlogTemplate>
+			<BlogProvider>
+				<BlogTemplate>
+					<BlogEntries />
+					<BlogNavButton type="home" destination="/" />
+				</BlogTemplate>
+			</BlogProvider>
 		</>
 	);
 }
