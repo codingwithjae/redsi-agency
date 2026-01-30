@@ -37,7 +37,7 @@
 
 	&-form__label {
 		font-size: var(--font-size-body-xxs);
-		font-weight: var(--poppins-medium-weight);
+		font-weight: var(--poppins-regular-weight);
 		color: var(--color-text-bg-secondary);
 		padding-left: 1.25rem;
 		text-transform: capitalize;
@@ -105,10 +105,11 @@
 		padding: 1.5625rem;
 		border-radius: 1.25rem;
 		font-size: var(--font-size-heading-m);
+		font-weight: var(--poppins-regular-weight);
 	}
 
 	&__details-two {
-		font-weight: var(--poppins-medium-weight);
+		font-weight: var(--poppins-regular-weight);
 	}
 
 	@media (max-width: 1023px) {

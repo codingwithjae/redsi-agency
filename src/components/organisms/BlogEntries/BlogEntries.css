@@ -90,7 +90,7 @@
 
 	&__post-title {
 		font-family: var(--poppins-family);
-		font-weight: var(--poppins-medium-weight);
+		font-weight: var(--poppins-bold-weight);
 		font-size: var(--font-size-body-s);
 		color: var(--color-text-bg-secondary);
 		margin-bottom: 1rem;
@@ -165,7 +165,7 @@
 		margin-top: auto;
 		font-family: var(--montserrat-family);
 		font-size: 0.875rem;
-		font-weight: var(--montserrat-medium-weight);
+		font-weight: var(--montserrat-bold-weight);
 		color: var(--color-bg-elements-and-text);
 		transition: transform 0.2s ease;
 

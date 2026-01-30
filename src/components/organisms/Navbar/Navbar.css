@@ -3,7 +3,7 @@
 	width: 100%;
 	font-family: var(--poppins-family);
 	font-size: var(--font-size-body-xs);
-	font-weight: var(--poppins-medium-weight);
+	font-weight: var(--poppins-regular-weight);
 	margin-bottom: 2rem;
 
 	&__container {

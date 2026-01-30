@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { client } from "../sanity/lib/sanity";
 import type { BlogContextType, Post } from "../types/blog";
 import { BlogContext } from "./BlogContext";
@@ -72,9 +72,7 @@ export function BlogProvider({ children }: { children: ReactNode }) {
 		}
 	}, []);
 
-	useEffect(() => {
-		fetchAllPosts();
-	}, [fetchAllPosts]);
+
 
 	const clearCurrentPost = useCallback(() => {
 		setCurrentPost(null);
