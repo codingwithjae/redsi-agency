@@ -15,9 +15,10 @@ export default function About() {
 								src={rocketImage}
 								alt="Rocket"
 								className="rocket-card__image"
-								width={662}
-								height={550}
+								width={400} // Reduced for mobile pressure
+								height={332}
 								loading="lazy"
+								decoding="async"
 							/>
 						</div>
 						<div className="rocket-card__text">{about.rocketCardText}</div>
