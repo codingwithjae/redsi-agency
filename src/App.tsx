@@ -1,17 +1,17 @@
 import GoToTop from "@/components/atoms/GoToTop/GoToTop";
-import LazyToast from "@/components/atoms/LazyToast/LazyToast";
 import Spinner from "@/components/atoms/Spinner/Spinner";
+import Toast from "@/components/atoms/Toast/Toast";
 import { DataProvider } from "@/context/DataProvider";
 import { Suspense, lazy } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-const AdminPage = lazy(() => import("@/components/pages/AdminPage/AdminPage"));
-const BlogPage = lazy(() => import("@/components/pages/BlogPage/BlogPage"));
-const BlogPostPage = lazy(
+const LazyAdminPage = lazy(() => import("@/components/pages/AdminPage/AdminPage"));
+const LazyBlogPage = lazy(() => import("@/components/pages/BlogPage/BlogPage"));
+const LazyBlogPostPage = lazy(
 	() => import("@/components/pages/BlogPostPage/BlogPostPage"),
 );
-const NotFoundPage = lazy(
+const LazyNotFoundPage = lazy(
 	() => import("@/components/pages/NotFoundPage/NotFoundPage"),
 );
 
@@ -28,10 +28,10 @@ function App() {
 					<Suspense fallback={<Spinner />}>
 						<Routes>
 							<Route path="/" element={<MainPage />} />
-							<Route path="/blog" element={<BlogPage />} />
-							<Route path="/blog/:slug" element={<BlogPostPage />} />
-							<Route path="/admin/*" element={<AdminPage />} />
-							<Route path="*" element={<NotFoundPage />} />
+							<Route path="/blog" element={<LazyBlogPage />} />
+							<Route path="/blog/:slug" element={<LazyBlogPostPage />} />
+							<Route path="/admin/*" element={<LazyAdminPage />} />
+							<Route path="*" element={<LazyNotFoundPage />} />
 						</Routes>
 					</Suspense>
 				</div>
@@ -40,7 +40,7 @@ function App() {
 						<div className="layout-container">
 							<GoToTop />
 						</div>
-						<LazyToast />
+						<Toast />
 					</>
 				)}
 			</DataProvider>
