@@ -62,12 +62,10 @@ export const useContactForm = () => {
 			};
 
 			await emailjs.send(
-				// biome-ignore lint/complexity/useLiteralKeys: Bracket notation required by strict TS config (noPropertyAccessFromIndexSignature)
-				import.meta.env["VITE_EMAILJS_SERVICE_ID"] as string,
-				"template_id",
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 				templateParams,
-				// biome-ignore lint/complexity/useLiteralKeys: Bracket notation required by strict TS config (noPropertyAccessFromIndexSignature)
-				import.meta.env["VITE_EMAILJS_PUBLIC_API_KEY"] as string,
+				import.meta.env.VITE_EMAILJS_PUBLIC_API_KEY,
 			);
 
 			setIsSuccess(true);
