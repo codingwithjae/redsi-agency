@@ -30,6 +30,7 @@ export default function ScrollNavItem({
 			<Link
 				activeClass={activeClass}
 				to={to}
+				href={`#${to}`}
 				spy={spy}
 				smooth={smooth}
 				offset={offset}

@@ -1,4 +1,3 @@
-import heroImage from "@/assets/images/hero-images.webp";
 import Button from "@/components/atoms/Button/Button";
 import { useData } from "@/hooks/useData";
 import { TypeAnimation } from "react-type-animation";
@@ -39,7 +38,7 @@ export default function HeroSection() {
 			<figure className="hero__container">
 				<img
 					className="hero__container-image"
-					src={heroImage}
+					src="/assets/images/hero-images.webp"
 					alt="Redsi Creative Heroes"
 					width={600}
 					height={600}

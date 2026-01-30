@@ -29,6 +29,7 @@ export default function Footer() {
 								<li key={link.label} className="footer__item">
 									<Link
 										to={link.href}
+										href={`#${link.href}`}
 										smooth={true}
 										duration={500}
 										offset={-70}
