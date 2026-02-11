@@ -1,6 +1,6 @@
 import Spinner from "@/components/atoms/Spinner/Spinner";
 import { useBlog } from "@/context/BlogProvider";
-import { urlFor } from "@/sanity/lib/sanity";
+import { urlFor } from "@/lib/sanity";
 import type { PortableTextImageNode, PortableTextMark } from "@/types/blog";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import type React from "react";

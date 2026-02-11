@@ -1,3 +1,5 @@
+import heroImageMobile from "@/assets/images/hero-images-mobile.webp";
+import heroImage from "@/assets/images/hero-images.webp";
 import Button from "@/components/atoms/Button/Button";
 import { useData } from "@/hooks/useData";
 import { Suspense, lazy } from "react";
@@ -49,11 +51,11 @@ export default function HeroSection() {
 				<picture>
 					<source
 						media="(max-width: 767px)"
-						srcSet="/assets/images/hero-images-mobile.webp"
+						srcSet={heroImageMobile}
 					/>
 					<img
 						className="hero__container-image"
-						src="/assets/images/hero-images.webp"
+						src={heroImage}
 						alt="Redsi Creative Heroes"
 						width={600}
 						height={600}

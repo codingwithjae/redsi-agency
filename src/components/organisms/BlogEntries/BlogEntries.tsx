@@ -1,6 +1,6 @@
 import Spinner from "@/components/atoms/Spinner/Spinner";
 import { useBlog } from "@/context/BlogProvider";
-import { urlFor } from "@/sanity/lib/sanity";
+import { urlFor } from "@/lib/sanity";
 import { useEffect } from "react";
 import { FiCalendar, FiClock, FiTag, FiUser } from "react-icons/fi";
 import { Link } from "react-router-dom";

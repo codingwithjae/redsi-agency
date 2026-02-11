@@ -29,5 +29,5 @@
 		"lib": ["esnext", "dom", "dom.iterable"],
 		"types": ["vite/client"]
 	},
-	"include": ["src", ".storybook"]
+	"include": ["src", ".storybook", "vite-env.d.ts"]
 }

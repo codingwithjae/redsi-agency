@@ -3,7 +3,7 @@ import SEO from "@/components/atoms/SEO/SEO";
 import BlogPost from "@/components/organisms/BlogPost/BlogPost";
 import BlogTemplate from "@/components/templates/BlogTemplate";
 import { BlogProvider, useBlog } from "@/context/BlogProvider";
-import { urlFor } from "@/sanity/lib/sanity";
+import { urlFor } from "@/lib/sanity";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./BlogPostPage.css";

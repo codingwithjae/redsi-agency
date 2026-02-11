@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useCallback, useContext, useState } from "react";
-import { client } from "../sanity/lib/sanity";
+import { client } from "@/lib/sanity";
 import type { BlogContextType, Post } from "../types/blog";
 import { BlogContext } from "./BlogContext";
 
