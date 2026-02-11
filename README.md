@@ -1,7 +1,5 @@
 # Redsi Agency - Modern Web Architecture
 
-> **Note**: This repository is a professional modernization and full refactoring of and old project made with vanilla JavaScript. It has been re-engineered from the ground up to prioritize performance, maintainability, and enterprise-grade type safety.
-
 ## 🚀 Overview
 
 Redsi is a high-performance landing page for a digital agency specializing in **Branding**, **Social Media**, and **Full-stack Web Development**. This project serves as a showcase of modern web standards, transforming a vanilla JavaScript codebase into a robust, type-safe React application.
